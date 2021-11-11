@@ -9,12 +9,14 @@
             <!-- start page title -->
             <div class="row">
                 <div class="col-md-4">
-                    <a href="{{ url()->previous() }}" type="button" class="btn btn-soft-blue waves-effect waves-light"><i
-                            class="mdi mdi-reply-all-outline"></i>&nbsp;Back</a>
+                    <a href="{{ url()->previous() }}" type="button"
+                        class="btn btn-sm btn-soft-danger waves-effect waves-light float-left"><i
+                            class="mdi mdi-reply-all-outline"></i>&nbsp;Go
+                        Back</a>
                 </div>
                 <div class="col-md-4">
-                    <h4 class="text-primary">
-                        <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp;
+                    <h4 class="text-primary mb-0 page-header text-center text-uppercase">
+                        {{-- <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp; --}}
                         ACTIVATE CARD
 
                     </h4>
@@ -50,104 +52,120 @@
 
                         <div class="col-md-12">
                             <div class="row">
-                                <div class=" col-md-7 m-2" id="request_form_div"
-                                    style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
-                                    <br><br><br>
+                                <div class=" col-md-7 m-2" id="request_form_div">
+                                    <div class="card site-card">
+                                        <div class="card-body">
+                                            <form action="#" class="select_beneficiary" id="payment_details_form"
+                                                autocomplete="off" aria-autocomplete="none">
+                                                @csrf
+                                                <div class="row container">
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-10">
 
-                                    <form action="#" class="select_beneficiary" id="payment_details_form" autocomplete="off"
-                                        aria-autocomplete="none">
-                                        @csrf
-                                        <div class="row container">
-                                            <div class="col-md-1"></div>
-                                            <div class="col-md-10">
+                                                        {{-- <br><br><br> --}}
+                                                        <div class="row">
+                                                            {{-- <div class="col-md-1"></div> --}}
 
-                                                {{-- <br><br><br> --}}
-                                                <div class="row">
-                                                    {{-- <div class="col-md-1"></div> --}}
+                                                            <div class="col-md-12">
 
-                                                    <div class="col-md-12">
-
-                                                        <div class="form-group row mb-3">
-                                                            <b class="col-md-12 text-primary">Account which card will be
-                                                                activated for &nbsp; <span class="text-danger">*</span>
-                                                            </b>
-
-
-                                                            <select class="form-control col-md-12 " id="my_account"
-                                                                required>
-                                                                <option value="">Select Account
-                                                                </option>
+                                                                <div class="form-group row mb-3">
+                                                                    <b class="col-md-12 text-primary">Account which card
+                                                                        will be
+                                                                        activated for &nbsp; <span
+                                                                            class="text-danger">*</span>
+                                                                    </b>
 
 
-                                                            </select>
-                                                        </div>
-
-                                                        <br>
-                                                        <hr class="mt-0">
-
-
-                                                        <div class="form-group row mb-3" id="pay_from_account">
-
-                                                            <b class="col-md-4 text-primary">Type Of Card &nbsp;
-                                                                <span class="text-danger">*</span></b>
-
-                                                            <select class="form-control col-md-8" id="cardType" required>
-                                                                <option value="">Select Type of Card</option>
-                                                                <option value="Visa Card">Visa Card</option>
-                                                                <option value="Master Card">Master Card</option>
-                                                            </select>
-                                                            <br>
+                                                                    <select class="form-control col-md-12 " id="my_account"
+                                                                        required>
+                                                                        <option value="">Select Account
+                                                                        </option>
 
 
+                                                                    </select>
+                                                                </div>
 
-                                                        </div>
+                                                                <br>
+                                                                <hr class="mt-0">
+
+
+                                                                <div class="form-group row mb-3" id="pay_from_account">
+
+                                                                    <b class="col-md-4 text-primary">Type Of Card &nbsp;
+                                                                        <span class="text-danger">*</span></b>
+
+                                                                    <select class="form-control col-md-8" id="cardType"
+                                                                        required>
+                                                                        <option value="">Select Type of Card</option>
+                                                                        <option value="Visa Card">Visa Card</option>
+                                                                        <option value="Master Card">Master Card</option>
+                                                                    </select>
+                                                                    <br>
 
 
 
-                                                        <div class="form-group row">
+                                                                </div>
 
-                                                            <b class="col-md-4 text-primary"> Card Number &nbsp; <span
-                                                                    class="text-danger">*</span></b>
 
-                                                            <input type="text" class="form-control col-md-8"
-                                                                id="card_number" placeholder="Enter Card Number"
-                                                                autocomplete="off" aria-autocomplete="none">
-                                                            {{-- <select class="form-control col-md-8" id="pUBranch"
+
+                                                                <div class="form-group row">
+
+                                                                    <b class="col-md-4 text-primary"> Card Number &nbsp;
+                                                                        <span class="text-danger">*</span></b>
+
+                                                                    <input type="text" class="form-control col-md-8"
+                                                                        id="card_number" placeholder="Enter Card Number"
+                                                                        autocomplete="off" aria-autocomplete="none">
+                                                                    {{-- <select class="form-control col-md-8" id="pUBranch"
                                                                 placeholder="Select Pick Up Branch" required>
                                                                 <option value="">Select Pick Up Branch</option>
                                                             </select> --}}
-                                                            <br>
+                                                                    <br>
 
+                                                                </div>
+                                                                <div class="form-group row">
+
+                                                                    <b class="col-md-4 text-primary" for="pin">
+                                                                        Enter Pin
+                                                                        <span class="text-danger">*</span></b>
+                                                                    <input type="password" class="form-control col-md-8"
+                                                                        id="pin" placeholder="Enter Your Pin"
+                                                                        autocomplete="off" aria-autocomplete="none"
+                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
+
+
+
+                                                                </div>
+
+                                                                <div class="form-group text-right yes_beneficiary">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success"
+                                                                        id="btn_submit_request_statement">
+                                                                        <span class="submit-text">Submit</span>
+                                                                        <span class="spinner-border spinner-border-sm mr-1"
+                                                                            role="status" id="spinner"
+                                                                            aria-hidden="true"></span>
+                                                                        <span id="spinner-text">Loading...</span>
+                                                                    </button>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            {{-- <div class="col-md-1"></div> --}}
                                                         </div>
-                                                        <div class="form-group row">
-
-                                                            <b class="col-md-4 text-primary" for="pin">
-                                                                Enter Pin
-                                                                <span class="text-danger">*</span></b>
-                                                            <input type="password" class="form-control col-md-8" id="pin"
-                                                                placeholder="Enter Your Pin" autocomplete="off"
-                                                                aria-autocomplete="none"
-                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
 
 
 
-                                                        </div>
 
-                                                        <div class="form-group text-right yes_beneficiary">
-                                                            <button type="button"
-                                                                class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success"
-                                                                id="btn_submit_request_statement">
-                                                                <span class="submit-text">Submit</span>
-                                                                <span class="spinner-border spinner-border-sm mr-1"
-                                                                    role="status" id="spinner" aria-hidden="true"></span>
-                                                                <span id="spinner-text">Loading...</span>
-                                                            </button>
-                                                        </div>
+
+
+
 
 
                                                     </div>
+                                                    <div class="col-md-1"></div>
 
-                                                    {{-- <div class="col-md-1"></div> --}}
                                                 </div>
 
 
@@ -158,30 +176,19 @@
 
 
 
-                                            </div>
-                                            <div class="col-md-1"></div>
 
+
+                                            </form>
                                         </div>
+                                    </div>
 
 
-
-
-
-
-
-
-
-
-
-                                    </form>
 
 
                                 </div> <!-- end col -->
 
-                                <div class="col-md-4 m-2" id="atm_request_summary"
-                                    style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
-                                    <br><br>
-                                    <div class=" col-md-12 card card-body">
+                                <div class="col-md-4 m-2" id="atm_request_summary">
+                                    <div class=" col-md-12 card card-body site-card">
                                         <h4 class="text-primary">Account Info.</h4>
                                         <hr class="mt-0">
                                         {{-- <br><br> --}}

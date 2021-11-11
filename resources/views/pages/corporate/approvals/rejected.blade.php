@@ -22,12 +22,12 @@
         <!-- start page title -->
         <div class="row">
             <div class="col-md-4">
-                <a href="{{ url()->previous() }}" type="button" class="btn btn-sm btn-soft-blue waves-effect waves-light"
+                <a href="{{ url()->previous() }}" type="button" class="btn btn-sm btn-soft-danger waves-effect waves-light"
                     id="page_back_button"><i class="mdi mdi-reply-all-outline"></i>&nbsp;Back</a>
             </div>
             <div class="col-md-4">
                 <h4 class="text-primary mb-0 page-header text-center text-uppercase">
-                    <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp;
+                    {{-- <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp; --}}
                     REJECTED TRANSACTION
 
                 </h4>
@@ -74,7 +74,7 @@
                                         class="table dt-responsive  table-bordered table-striped nowrap w-100 pending_transaction_request "
                                         style="zoom: 1;">
                                         <thead>
-                                            <tr class="bg-info text-white">
+                                            <tr class="bg-danger text-white">
                                                 <th>Rquest Id</th>
                                                 <th>Req-Type</th>
                                                 <th>Account No</th>

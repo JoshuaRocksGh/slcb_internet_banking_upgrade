@@ -78,7 +78,7 @@
                                 <a href="{{ url('cardless-payment') }}">Cardless</a>
                             </li> --}}
                             <li>
-                                <a href="{{ url('e-korpor') }}">E-Korpor</a>
+                                <a href="{{ url('salone-link') }}">Salone Link</a>
                             </li>
                             <li>
                                 <a href="{{ url('qr-payment') }}">
@@ -90,7 +90,7 @@
                             </li>
                             @if (config('app.corporate'))
                                 <li>
-                                    <a href="{{ url('bulk-korpor') }}">Bulk E-Korpor</a>
+                                    <a href="{{ url('bulk-salone-link') }}">Bulk Salone Link</a>
                                 </li>
 
                                 <li>
@@ -122,7 +122,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="{{ url('home') }}">
+                    <a href="{{ url('my-investments') }}">
                         <i class="fas fa-hand-holding-usd"></i> <span> My Investments</span>
                     </a>
                 </li>
@@ -182,11 +182,11 @@
                             <li>
                                 <a href="{{ url('open-additional-account') }}">Open additional account</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="{{ url('complaint') }}">
                                     <span>Make Complaint</span>
                                 </a>
-                            </li>
+                            </li> --}}
 
                         </ul>
                     </div>
@@ -212,7 +212,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="{{ url('home') }}">
+                    <a href="{{ url('budgetting') }}">
                         <i class="fas fa-file-invoice-dollar"></i> <span> Budgetting</span>
                     </a>
                 </li>
@@ -256,9 +256,11 @@
                                     <a href="{{ url('update-company-info') }}">Update Company Information</a>
                                 </li>
                             @endif
-                            <li>
-                                <a href="{{ url('change-pin') }}">Pin Setup</a>
-                            </li>
+                            @if (!config('app.corporate'))
+                                <li>
+                                    <a href="{{ url('change-pin') }}">Pin Setup</a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
 

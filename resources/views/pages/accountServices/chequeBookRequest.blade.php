@@ -45,12 +45,14 @@
             <!-- start page title -->
             <div class="row">
                 <div class="col-md-4">
-                    <a href="{{ url()->previous() }}" type="button" class="btn btn-soft-blue waves-effect waves-light"><i
-                            class="mdi mdi-reply-all-outline"></i>&nbsp;Back</a>
+                    <a href="{{ url()->previous() }}" type="button"
+                        class="btn btn-sm btn-soft-danger waves-effect waves-light float-left"><i
+                            class="mdi mdi-reply-all-outline"></i>&nbsp;Go
+                        Back</a>
                 </div>
                 <div class="col-md-4">
-                    <h4 class="text-primary">
-                        <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp;
+                    <h4 class="text-primary mb-0 page-header text-center text-uppercase">
+                        {{-- <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp; --}}
                         CHEQUE BOOK REQUEST
 
                     </h4>
@@ -61,8 +63,7 @@
 
                         <span class="flaot-right">
                             <b class="text-primary"> Account Services </b> &nbsp; > &nbsp; <b
-                                class="text-danger">CHEQUE
-                                BOOK REQUEST</b>
+                                class="text-danger">Cheque Book Request</b>
 
 
                         </span>
@@ -87,203 +88,112 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <div class="receipt" style="display: none">
-                                <div class="container card card-body">
 
-                                    <div class="container">
-                                        <div class="___class_+?19___">
-                                            <div class="col-md-12 col-md-offset-3 body-main">
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <div class="col-md-4 "> <img class="img "
-                                                                alt="InvoIce Template"
-                                                                src="{{ asset('assets/images/' . env('APPLICATION_INFO_LOGO_LIGHT')) }} "
-                                                                style="zoom: 0.6" /> </div>
-                                                        <div class="col-md-4"></div>
-                                                        <div class="col-md-4 text-right">
-                                                            <h4 class="text-primary"><strong>ROKEL COMMERCIAL
-                                                                    BANK</strong>
-                                                            </h4>
-                                                            <p>25-27 Siaka Stevens St</p>
-                                                            <p> Freetown, Sierra Leone</p>
-                                                            <p>rokelsl@rokelbank.sl</p>
-                                                            <p>(+232)-76-22-25-01</p>
-                                                        </div>
-                                                    </div>
-                                                    <br>
-                                                    <div class="page-header">
-                                                        <h2><span id="personal_transfer_receipt">Cheque Book Request</span>
-                                                            <span id="coporate_transfer_approval">Cheque Book Request
-                                                                Awaiting Approval</span>
-                                                        </h2>
-                                                    </div>
-                                                    <br>
-                                                    <div class="table-responsive">
-                                                        <table class="table mb-0">
-                                                            <thead class="thead-light">
-                                                                <tr>
-                                                                    {{-- <th>#</th> --}}
-                                                                    <th>Description</th>
-                                                                    <th class="text-right">Further Details</th>
-                                                                    {{-- <th>Amount </th> --}}
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    {{-- <th scope="row">1</th> --}}
-                                                                    <td>Account Name</td>
-                                                                    <td class="text-right"><span
-                                                                            id="from_account_name"></span></td>
-                                                                    {{-- <td></td> --}}
-                                                                </tr>
-                                                                <tr>
-                                                                    {{-- <th scope="row">1</th> --}}
-                                                                    <td>Account Number</td>
-                                                                    <td class="text-right"><span
-                                                                            id="from_account_number"></span></td>
-                                                                    {{-- <td></td> --}}
-                                                                </tr>
-                                                                <tr>
-                                                                    {{-- <th scope="row">1</th> --}}
-                                                                    <td>Number of Leaflets</td>
-                                                                    <td class="text-right"><span
-                                                                            id="number_of_leaflets"></span></td>
-                                                                    {{-- <td></td> --}}
-                                                                </tr>
-
-                                                                <tr>
-                                                                    {{-- <th scope="row">1</th> --}}
-                                                                    <td>Pickup Branch</td>
-                                                                    <td class="text-right"><span
-                                                                            id="pickup_branch"></span>
-                                                                    </td>
-                                                                    {{-- <td></td> --}}
-                                                                </tr>
-
-                                                                <tr>
-                                                                    {{-- <th scope="row">3</th> --}}
-                                                                    {{-- <td></td> --}}
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div> <!-- end table-responsive-->
-                                                    <br>
-                                                    <div>
-                                                        <div class="col-md-12">
-                                                            <p><b>Date Posted :</b> {{ date('d F, Y') }}</p> <br /> <br />
-                                                            <p><b>Posted By : {{ session('userId') }}</b></p>
-                                                        </div>
-                                                    </div>
-                                                    <br><br>
-                                                    <div class="row">
-                                                        <div class="col-md-4"></div>
-                                                        <div class="col-md-4">
-                                                            <button
-                                                                class="btn btn-light btn-rounded hide_on_print text-center"
-                                                                type="button" onclick="window.print()">Print
-                                                                Receipt
-                                                            </button>
-
-
-                                                        </div>
-                                                        <div class="col-md-4"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="form_process">
 
                                 <div class="row ">
-                                    <div class=" col-md-7 m-2 h-100" id="request_form_div" mh-100
-                                        style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
-                                        <br><br><br>
+                                    <div class=" col-md-7 m-2 h-100" id="request_form_div" mh-100>
+                                        <div class="card site-card">
+                                            <div class="card-body">
+                                                <form action="#" class="select_beneficiary" id="payment_details_form"
+                                                    autocomplete="off" aria-autocomplete="none">
+                                                    @csrf
+                                                    <div class="row container">
+                                                        <div class="col-md-1"></div>
+                                                        <div class="col-md-10">
 
-                                        <form action="#" class="select_beneficiary" id="payment_details_form"
-                                            autocomplete="off" aria-autocomplete="none">
-                                            @csrf
-                                            <div class="row container">
-                                                <div class="col-md-1"></div>
-                                                <div class="col-md-10">
+                                                            {{-- <br><br><br> --}}
+                                                            <div class="row">
+                                                                {{-- <div class="col-md-1"></div> --}}
 
-                                                    {{-- <br><br><br> --}}
-                                                    <div class="row">
-                                                        {{-- <div class="col-md-1"></div> --}}
+                                                                <div class="col-md-12">
 
-                                                        <div class="col-md-12">
-
-                                                            <div class="form-group row mb-3">
-                                                                <b class="col-md-12 text-primary">Account which cheque
-                                                                    book will be made for &nbsp; <span
-                                                                        class="text-danger">*</span> </b>
+                                                                    <div class="form-group row mb-3">
+                                                                        <b class="col-md-12 text-primary">Account which
+                                                                            cheque
+                                                                            book will be made for &nbsp; <span
+                                                                                class="text-danger">*</span> </b>
 
 
-                                                                <select class="form-control col-md-12 " id="my_account"
-                                                                    required>
-                                                                    <option value="">Select Account</option>
-                                                                </select>
+                                                                        <select class="form-control col-md-12 "
+                                                                            id="my_account" required>
+                                                                            <option value="">Select Account</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <br>
+                                                                    <hr class="mt-0">
+
+                                                                    <div class="form-group row mb-3">
+
+                                                                        <b class="col-md-4 text-primary" for="leaflet">
+                                                                            Number of Leftlets
+                                                                            <span class="text-danger">*</span></b>
+
+                                                                        <select class="form-control col-md-8" id="leaflet"
+                                                                            required>
+                                                                            <option value="">-- Select number --</option>
+                                                                            <option value="25">25</option>
+                                                                            <option value="50">50</option>
+                                                                            <option value="100">100</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="form-group row mb-3">
+
+                                                                        <b class="col-md-4 text-primary">Pick up Branch
+                                                                            <span class="text-danger">*</span></b>
+
+                                                                        <select class="form-control col-md-8" id="branch"
+                                                                            required>
+                                                                            <option value="">-- Selected Branch --</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="form-group row mb-3 pin">
+                                                                        <b class="col-md-4 text-primary">Enter Pin
+                                                                            <span class="text-danger">*</span></b>
+
+                                                                        <input type="text" class="form-control col-md-8"
+                                                                            id="pin"
+                                                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
+
+
+                                                                    </div>
+
+
+
+
+                                                                    <div class="form-group text-right">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success m-2"
+                                                                            id="submit_cheque_request">
+                                                                            <span class="submit-text">Submit</span>
+                                                                            <span
+                                                                                class="spinner-border spinner-border-sm mr-1"
+                                                                                role="status" id="spinner"
+                                                                                aria-hidden="true"></span>
+                                                                            <span id="spinner-text">Loading...</span>
+                                                                        </button>
+                                                                    </div>
+
+
+                                                                </div>
+
+                                                                {{-- <div class="col-md-1"></div> --}}
                                                             </div>
-                                                            <br>
-                                                            <hr class="mt-0">
-
-                                                            <div class="form-group row mb-3">
-
-                                                                <b class="col-md-4 text-primary" for="leaflet">
-                                                                    Number of Leftlets
-                                                                    <span class="text-danger">*</span></b>
-
-                                                                <select class="form-control col-md-8" id="leaflet" required>
-                                                                    <option value="">-- Select number --</option>
-                                                                    <option value="25">25</option>
-                                                                    <option value="50">50</option>
-                                                                    <option value="100">100</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <div class="form-group row mb-3">
-
-                                                                <b class="col-md-4 text-primary">Pick up Branch
-                                                                    <span class="text-danger">*</span></b>
-
-                                                                <select class="form-control col-md-8" id="branch" required>
-                                                                    <option value="">-- Selected Branch --</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <div class="form-group row mb-3 pin">
-                                                                <b class="col-md-4 text-primary">Enter Pin
-                                                                    <span class="text-danger">*</span></b>
-
-                                                                <input type="text" class="form-control col-md-8" id="pin"
-                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
-
-
-                                                            </div>
 
 
 
 
-                                                            <div class="form-group text-right">
-                                                                <button type="button"
-                                                                    class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success m-2"
-                                                                    id="submit_cheque_request">
-                                                                    <span class="submit-text">Submit</span>
-                                                                    <span class="spinner-border spinner-border-sm mr-1"
-                                                                        role="status" id="spinner"
-                                                                        aria-hidden="true"></span>
-                                                                    <span id="spinner-text">Loading...</span>
-                                                                </button>
-                                                            </div>
+
+
+
 
 
                                                         </div>
+                                                        <div class="col-md-1"></div>
 
-                                                        {{-- <div class="col-md-1"></div> --}}
                                                     </div>
 
 
@@ -294,30 +204,19 @@
 
 
 
-                                                </div>
-                                                <div class="col-md-1"></div>
 
+
+                                                </form>
                                             </div>
+                                        </div>
 
 
-
-
-
-
-
-
-
-
-
-                                        </form>
 
 
                                     </div> <!-- end col -->
 
-                                    <div class="col-md-4 m-2" id="atm_request_summary"
-                                        style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
-                                        <br><br>
-                                        <div class=" col-md-12 card card-body">
+                                    <div class="col-md-4 m-2" id="atm_request_summary">
+                                        <div class=" col-md-12 card card-body site-card">
                                             <h4 class="text-primary">Account Info.</h4>
                                             <hr class="mt-0">
                                             {{-- <br><br> --}}

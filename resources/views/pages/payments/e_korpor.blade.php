@@ -42,8 +42,8 @@
         }
 
         /* input[name="reverse_pin"] {
-                                                                                            display: none;
-                                                                                        } */
+                                                                                                                                                                                    display: none;
+                                                                                                                                                                                } */
 
     </style>
 
@@ -58,18 +58,24 @@
             <br>
             <!-- start page title -->
             <div class="row">
-                <div class="col-md-6">
-                    <h4 class="text-primary">
-                        <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp;
-                        E-Korpor
+                <div class="col-md-4">
+                    <a href="{{ url()->previous() }}" type="button"
+                        class="btn btn-sm btn-soft-danger waves-effect waves-light float-left"><i
+                            class="mdi mdi-reply-all-outline"></i>&nbsp;Go
+                        Back</a>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-primary mb-0 page-header text-center text-uppercase">
+                        {{-- <img src="{{ asset('assets/images/logoRKB.png') }}" alt="logo" style="zoom: 0.05">&emsp; --}}
+                        SALONE LINK
                     </h4>
                 </div>
 
-                <div class="col-md-6 text-right">
+                <div class="col-md-4 text-right">
                     <h6>
 
                         <span class="float-right">
-                            <b class="text-primary"> Payment </b> &nbsp; > &nbsp; <b class="text-danger">E-Korpor
+                            <b class="text-primary"> Payment </b> &nbsp; > &nbsp; <b class="text-danger">Salone Link
                                 Payment</b>
 
 
@@ -89,28 +95,28 @@
 
         <div class="">
 
-            <ul class="nav nav-pills navtab-bg nav-justified">
-                <li class="nav-item">
+            <ul class="nav nav-pills navtab-bg nav-justified ">
+                <li class="nav-item ">
                     <a href="#send_korpor_page" data-toggle="tab" aria-expanded="true"
                         class="nav-link active send_korpor_tab">
-                        Send E-Korpor
+                        Send Salone Link
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#reverse_korpor_page" data-toggle="tab" aria-expanded="false"
                         class="nav-link reverse_korpor_tab">
-                        Reverse E-Korpor
+                        Reverse Salone Link
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#redeem_korpor_page" data-toggle="tab" aria-expanded="false"
                         class="nav-link redeem_korpor_tab">
-                        Redeem E-Korpor
+                        Redeem Salone Link
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#korpor_trans_page" data-toggle="tab" aria-expanded="false" class="nav-link korpor_trans_tab">
-                        E-Korpor Transactions
+                        Salone Link Transactions
                     </a>
                 </li>
             </ul>
@@ -123,218 +129,14 @@
 
                                     <div class="col-md-12">
 
-                                        <div class="receipt">
-                                            <div class="container card card-body">
 
-                                                <div class="container">
-                                                    <div class="">
-                                                        <div class="col-md-12 col-md-offset-3 body-main">
-                                                            <div class="col-md-12">
-                                                                <div class="row">
-                                                                    <div class="col-md-4 "> <img class="img "
-                                                                            alt="InvoIce Template"
-                                                                            src="{{ asset('assets/images/' . env('APPLICATION_INFO_LOGO_LIGHT')) }} "
-                                                                            style="zoom: 0.6" /> </div>
-                                                                    <div class="col-md-4"></div>
-                                                                    <div class="col-md-4 text-right">
-                                                                        <h4 class="text-primary"><strong>ROKEL COMMERCIAL
-                                                                                BANK</strong>
-                                                                        </h4>
-                                                                        <p>25-27 Siaka Stevens St</p>
-                                                                        <p> Freetown, Sierra Leone</p>
-                                                                        <p>rokelsl@rokelbank.sl</p>
-                                                                        <p>(+232)-76-22-25-01</p>
-                                                                    </div>
-                                                                </div>
-                                                                <br>
-                                                                <div class="page-header">
-                                                                    <h2><span id="personal_transfer_receipt">E-Korpor
-                                                                            Transfer Receipt</span>
-                                                                        {{-- <span id="coporate_transfer_approval">Transaction Awaiting
-                                                                            Approval</span> --}}
-                                                                    </h2>
-                                                                </div>
-                                                                <br>
-                                                                {{-- <div class="row">
-                                                                    <div class="col-md-12 text-center">
-                                                                        <h2>INVOICE</h2>
-                                                                        <h5>04854654101</h5>
-                                                                    </div>
-                                                                </div> --}}
-                                                                <br />
-                                                                {{-- <div class="table-responsive">
-                                                                    <table class="table mb-0">
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th><h5>Description</h5></th>
-                                                                                <th><h5>Further Details</h5></th>
-                                                                                <th><h5>Amount</h5></th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="col-md-9">
-                                                                                    From Account Number<br>
-                                                                                    004004110449140121
-                                                                                </td>
-                                                                                <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 50,000 </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="col-md-9">
-                                                                                    To Account Number<br>
-                                                                                    004004110445350137
-                                                                                </td>
-                                                                                <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 5,200 </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="col-md-9">Category Type</td>
-                                                                                <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 25,000 </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="col-md-9">Purpose of Transfer</td>
-                                                                                <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 2,200 </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="col-md-9"> Transfer Amount</td>
-                                                                                <td class="text-right">
-                                                                                    <p> <strong>Shipment and Taxes:</strong> </p>
-                                                                                    <p> <strong>Total Amount: </strong> </p>
-                                                                                    <p> <strong>Discount: </strong> </p>
-                                                                                    <p> <strong>Payable Amount: </strong> </p>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 500 </strong> </p>
-                                                                                    <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 82,900</strong> </p>
-                                                                                    <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 3,000 </strong> </p>
-                                                                                    <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 79,900</strong> </p>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr style="color: #F81D2D;">
-                                                                                <td class="text-right">
-                                                                                    <h4><strong>Total:</strong></h4>
-                                                                                </td>
-                                                                                <td class="text-left">
-                                                                                    <h4><strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 79,900 </strong></h4>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div> --}}
-                                                                <div class="table-responsive">
-                                                                    <table class="table mb-0">
-                                                                        <thead class="thead-light">
-                                                                            <tr>
-                                                                                {{-- <th>#</th> --}}
-                                                                                <th>Description</th>
-                                                                                <th class="text-right">Further Details
-                                                                                </th>
-                                                                                {{-- <th>Amount </th> --}}
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                {{-- <th scope="row">1</th> --}}
-                                                                                <td>Transfer From Account Number</td>
-                                                                                <td class="text-right"><span
-                                                                                        id="from_account_receipt"></span>
-                                                                                </td>
-                                                                                {{-- <td></td> --}}
-                                                                            </tr>
-                                                                            <tr>
-                                                                                {{-- <th scope="row">2</th> --}}
-                                                                                <td>Receiver Name</td>
-                                                                                <td class="text-right"><span
-                                                                                        id="receiver_name_receipt"></span>
-                                                                                </td>
-                                                                                {{-- <td></td> --}}
-                                                                            </tr>
-                                                                            <tr>
-                                                                                {{-- <th scope="row">3</th> --}}
-                                                                                <td>Receiver Telephone</td>
-                                                                                <td class="text-right"><span
-                                                                                        id="receiver_telephone_receipt"></span>
-                                                                                </td>
-                                                                                {{-- <td></td> --}}
-                                                                            </tr>
-                                                                            <tr>
-                                                                                {{-- <th scope="row">3</th> --}}
-                                                                                <td>Reference Number</td>
-                                                                                <td class="text-right"><span
-                                                                                        id="reference_number_receipt"></span>
-                                                                                </td>
-                                                                                {{-- <td></td> --}}
-                                                                            </tr>
-                                                                            <tr>
-                                                                                {{-- <th scope="row">3</th> --}}
-                                                                                <td>Amount</td>
-                                                                                {{-- <td></td> --}}
-                                                                                <td class="text-right"><strong><span
-                                                                                            class="receipt_currency"></span>
-                                                                                        &nbsp;<span
-                                                                                            id="amount_receipt"></span></strong>
-                                                                                </td>
-                                                                            </tr>
-                                                                            {{-- <tr>
-                                                                                <th scope="row">3</th>
-                                                                                <td>Transaction Fee </td>
-                                                                                <td></td>
-                                                                                <td class="text-right"><strong>(<span
-                                                                                            class="receipt_currency"></span>) &nbsp;
-                                                                                        15.00</strong></td>
-                                                                            </tr> --}}
-                                                                            {{-- <tr>
-                                                                                <th scope="row">3</th>
-                                                                                <td><strong>Total Amount</strong> </td>
-                                                                                <td></td>
-                                                                                <td><strong><span
-                                                                                            id="total_amount_receipt"></span></strong>
-                                                                                </td>
-                                                                            </tr> --}}
-                                                                            <tr>
-                                                                                {{-- <th scope="row">3</th> --}}
-                                                                                {{-- <td></td> --}}
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div> <!-- end table-responsive-->
-                                                                <br>
-                                                                <div>
-                                                                    <div class="col-md-12">
-                                                                        <p><b>Date Posted :</b> {{ date('d F, Y') }}</p>
-                                                                        <br /> <br />
-                                                                        <p><b>Posted By : {{ session('userId') }}</b></p>
-                                                                    </div>
-                                                                </div>
-                                                                <br><br>
-                                                                <div class="row">
-                                                                    <div class="col-md-5"></div>
-                                                                    <div class="col-md-2">
-                                                                        <button
-                                                                            class="btn btn-light btn-rounded hide_on_print text-center"
-                                                                            type="button" onclick="window.print()">Print
-                                                                            Receipt
-                                                                        </button>
-
-
-                                                                    </div>
-                                                                    <div class="col-md-5"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
                                         <div class="form_process">
                                             <div class="row">
 
 
 
-                                                <div class="col-md-7" id="transaction_summary"
-                                                    style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
+                                                <div class="col-md-7" id="transaction_summary">
                                                     <br><br><br>
                                                     <div class="col-md-12">
                                                         <div class="card border p-3 mt-4 mt-lg-0 rounded">
@@ -550,174 +352,192 @@
 
                                                 </div>
 
-                                                <div class=" col-md-7 m-2" id="request_form_div"
-                                                    style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
-                                                    <br><br><br>
+                                                <div class=" col-md-7 m-2" id="request_form_div">
 
-                                                    <form action="#" class="select_beneficiary"
-                                                        id="send_korpor_payment_details_form" autocomplete="off"
-                                                        aria-autocomplete="none">
-                                                        @csrf
-                                                        <div class="row container">
-                                                            <div class="col-md-1"></div>
-                                                            <div class="col-md-10">
+                                                    <div class="card site-card">
+                                                        <div class="card-body">
+                                                            <form action="#" class="select_beneficiary"
+                                                                id="send_korpor_payment_details_form" autocomplete="off"
+                                                                aria-autocomplete="none">
+                                                                @csrf
+                                                                <div class="row container">
+                                                                    <div class="col-md-1"></div>
+                                                                    <div class="col-md-10">
 
-                                                                {{-- <br><br><br> --}}
-                                                                <div class="row">
-                                                                    {{-- <div class="col-md-1"></div> --}}
+                                                                        {{-- <br><br><br> --}}
+                                                                        <div class="row">
+                                                                            {{-- <div class="col-md-1"></div> --}}
 
-                                                                    <div class="col-md-12">
+                                                                            <div class="col-md-12">
 
-                                                                        <div class="form-group row ">
-                                                                            <b class="col-md-12 text-primary">Account from
-                                                                                which
-                                                                                the money will
-                                                                                be tansfered &nbsp;
-                                                                                <span class="text-danger">*</span> </b>
-
-
-                                                                            <select
-                                                                                class="form-control col-md-12 from_account"
-                                                                                id="account_of_transfer" required>
-                                                                                <option disabled selected value="">Select
-                                                                                    Account
-                                                                                </option>
-                                                                                @foreach (session()->get('customerAccounts') as $i => $account)
-                                                                                    <option
-                                                                                        value="{{ $account->accountType . '~' . $account->accountDesc . '~' . $account->accountNumber . '~' . $account->currency . '~' . $account->availableBalance . '~' . $account->accountMandate . '~' . $account->currencyCode }}">
-                                                                                        {{ $account->accountDesc . '||' . $account->accountNumber . '||' . $account->currency . ' ' . $account->availableBalance }}
-                                                                                    </option>
-                                                                                @endforeach
+                                                                                <div class="form-group row ">
+                                                                                    <b class="col-md-12 text-primary">Account
+                                                                                        from
+                                                                                        which
+                                                                                        the money will
+                                                                                        be tansfered &nbsp;
+                                                                                        <span
+                                                                                            class="text-danger">*</span>
+                                                                                    </b>
 
 
-                                                                            </select>
-                                                                        </div>
-                                                                        <hr style="padding-top: 0px; padding-bottom: 0px;">
+                                                                                    <select
+                                                                                        class="form-control col-md-12 from_account"
+                                                                                        id="account_of_transfer" required>
+                                                                                        <option disabled selected value="">
+                                                                                            Select
+                                                                                            Account
+                                                                                        </option>
+                                                                                        @foreach (session()->get('customerAccounts') as $i => $account)
+                                                                                            <option
+                                                                                                value="{{ $account->accountType . '~' . $account->accountDesc . '~' . $account->accountNumber . '~' . $account->currency . '~' . $account->availableBalance . '~' . $account->accountMandate . '~' . $account->currencyCode }}">
+                                                                                                {{ $account->accountDesc . '||' . $account->accountNumber . '||' . $account->currency . ' ' . $account->availableBalance }}
+                                                                                            </option>
+                                                                                        @endforeach
 
 
-                                                                        <div class="form-group row">
-
-                                                                            <b class="col-md-5 text-primary"> Type of
-                                                                                Transfer &nbsp; <span
-                                                                                    class="text-danger">*</span></b>
-
-                                                                            <div class="row col-md-7 ">
-                                                                                <div
-                                                                                    class="radio radio-primary form-check-inline m-1 col-md-5 destination">
-                                                                                    <input type="radio" id="inlineRadio1"
-                                                                                        value="SELF" name="radioInline">
-                                                                                    <label for="inlineRadio1"> Self </label>
+                                                                                    </select>
                                                                                 </div>
-                                                                                <div
-                                                                                    class="radio  radio-primary form-check-inline m-1 col-md-5 transfer_type">
-                                                                                    <input type="radio" id="inlineRadio2"
-                                                                                        value="OTHERS" name="radioInline"
-                                                                                        checked>
-                                                                                    <label for="inlineRadio2">
-                                                                                        Others</label>
-                                                                                </div>
-
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <hr style="padding-top: 0px; padding-bottom: 0px;">
+                                                                                <hr
+                                                                                    style="padding-top: 0px; padding-bottom: 0px;">
 
 
-                                                                        <div class="others_form">
+                                                                                <div class="form-group row">
 
+                                                                                    <b class="col-md-5 text-primary"> Type
+                                                                                        of
+                                                                                        Transfer &nbsp; <span
+                                                                                            class="text-danger">*</span></b>
 
-                                                                            <div class="form-group row">
+                                                                                    <div class="row col-md-7 ">
+                                                                                        <div
+                                                                                            class="radio radio-primary form-check-inline m-1 col-md-5 destination">
+                                                                                            <input type="radio"
+                                                                                                id="inlineRadio1"
+                                                                                                value="SELF"
+                                                                                                name="radioInline">
+                                                                                            <label for="inlineRadio1"> Self
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="radio  radio-primary form-check-inline m-1 col-md-5 transfer_type">
+                                                                                            <input type="radio"
+                                                                                                id="inlineRadio2"
+                                                                                                value="OTHERS"
+                                                                                                name="radioInline" checked>
+                                                                                            <label for="inlineRadio2">
+                                                                                                Others</label>
+                                                                                        </div>
 
-                                                                                <b class="col-md-4 text-primary"> Receiver
-                                                                                    Name
-                                                                                    &nbsp; <span
-                                                                                        class="text-danger">*</span></b>
-
-
-                                                                                <input type="text"
-                                                                                    class="form-control col-md-8 "
-                                                                                    id="receiver_name"
-                                                                                    placeholder="Enter Receiver Name"
-                                                                                    autocomplete="off" required>
-                                                                                <br>
-
-                                                                            </div>
-
-                                                                            <div class="form-group row">
-
-                                                                                <b class="col-md-4 text-primary"> Receiver
-                                                                                    Telphone &nbsp; <span
-                                                                                        class="text-danger">*</span></b>
-
-                                                                                <input type="text"
-                                                                                    class="form-control col-md-8 "
-                                                                                    id="receiver_phoneNum"
-                                                                                    placeholder="Enter Receiver Phone Number"
-                                                                                    autocomplete="off"
-                                                                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                                                    required>
-                                                                                <br>
-
-                                                                            </div>
-
-                                                                            <div class="form-group row">
-
-                                                                                <b class="col-md-4 text-primary"> Receiver
-                                                                                    Address: &nbsp; <span
-                                                                                        class="text-danger">*</span></b>
-
-                                                                                <input type="text"
-                                                                                    class="form-control col-md-8 "
-                                                                                    id="receiver_address"
-                                                                                    placeholder="Enter Receiver Address"
-                                                                                    autocomplete="off" required>
-                                                                                <br>
-
-                                                                            </div>
-
-                                                                            <div class="form-group row mb-3">
-
-                                                                                <b class="col-md-4 text-primary">Amount&nbsp;
-                                                                                    <span
-                                                                                        class="text-danger">*</span></b>
-
-
-                                                                                <div class="input-group mb-1 col-8"
-                                                                                    style="padding: 0px;">
-                                                                                    <div class="input-group-prepend">
-                                                                                        <input type="text"
-                                                                                            class="input-group-text select_currency"
-                                                                                            id="select_currency"
-                                                                                            style="width: 80px;" readonly>
                                                                                     </div>
 
-                                                                                    &nbsp;&nbsp;
-                                                                                    <input type="text"
-                                                                                        class="form-control " id="amount"
-                                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')"
-                                                                                        required>
                                                                                 </div>
 
+                                                                                <hr
+                                                                                    style="padding-top: 0px; padding-bottom: 0px;">
 
 
-                                                                            </div>
+                                                                                <div class="others_form">
 
-                                                                            <div class="form-group row">
-                                                                                <b class="col-md-4 text-primary">Purpose of
-                                                                                    Transfer<span
-                                                                                        class="text-danger">*</span></b>
 
-                                                                                <input type="text"
-                                                                                    class="form-control col-md-8 "
-                                                                                    id="others_form_narration"
-                                                                                    placeholder="Enter Naration"
-                                                                                    autocomplete="off" required
-                                                                                    value="E-Korpor Transfer">
+                                                                                    <div class="form-group row">
 
-                                                                            </div>
+                                                                                        <b class="col-md-4 text-primary">
+                                                                                            Receiver
+                                                                                            Name
+                                                                                            &nbsp; <span
+                                                                                                class="text-danger">*</span></b>
 
-                                                                            {{-- <div class="form-group row">
+
+                                                                                        <input type="text"
+                                                                                            class="form-control col-md-8 "
+                                                                                            id="receiver_name"
+                                                                                            placeholder="Enter Receiver Name"
+                                                                                            autocomplete="off" required>
+                                                                                        <br>
+
+                                                                                    </div>
+
+                                                                                    <div class="form-group row">
+
+                                                                                        <b class="col-md-4 text-primary">
+                                                                                            Receiver
+                                                                                            Telphone &nbsp; <span
+                                                                                                class="text-danger">*</span></b>
+
+                                                                                        <input type="text"
+                                                                                            class="form-control col-md-8 "
+                                                                                            id="receiver_phoneNum"
+                                                                                            placeholder="Enter Receiver Phone Number"
+                                                                                            autocomplete="off"
+                                                                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                                            required>
+                                                                                        <br>
+
+                                                                                    </div>
+
+                                                                                    <div class="form-group row">
+
+                                                                                        <b class="col-md-4 text-primary">
+                                                                                            Receiver
+                                                                                            Address: &nbsp; <span
+                                                                                                class="text-danger">*</span></b>
+
+                                                                                        <input type="text"
+                                                                                            class="form-control col-md-8 "
+                                                                                            id="receiver_address"
+                                                                                            placeholder="Enter Receiver Address"
+                                                                                            autocomplete="off" required>
+                                                                                        <br>
+
+                                                                                    </div>
+
+                                                                                    <div class="form-group row mb-3">
+
+                                                                                        <b class="col-md-4 text-primary">Amount&nbsp;
+                                                                                            <span
+                                                                                                class="text-danger">*</span></b>
+
+
+                                                                                        <div class="input-group mb-1 col-8"
+                                                                                            style="padding: 0px;">
+                                                                                            <div
+                                                                                                class="input-group-prepend">
+                                                                                                <input type="text"
+                                                                                                    class="input-group-text select_currency"
+                                                                                                    id="select_currency"
+                                                                                                    style="width: 80px;"
+                                                                                                    readonly>
+                                                                                            </div>
+
+                                                                                            &nbsp;&nbsp;
+                                                                                            <input type="text"
+                                                                                                class="form-control "
+                                                                                                id="amount"
+                                                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')"
+                                                                                                required>
+                                                                                        </div>
+
+
+
+                                                                                    </div>
+
+                                                                                    <div class="form-group row">
+                                                                                        <b class="col-md-4 text-primary">Purpose
+                                                                                            of
+                                                                                            Transfer<span
+                                                                                                class="text-danger">*</span></b>
+
+                                                                                        <input type="text"
+                                                                                            class="form-control col-md-8 "
+                                                                                            id="others_form_narration"
+                                                                                            placeholder="Enter Naration"
+                                                                                            autocomplete="off" required
+                                                                                            value="Salone Link Transfer">
+
+                                                                                    </div>
+
+                                                                                    {{-- <div class="form-group row">
 
                                                                                 <b class="col-md-5 text-primary " for="pin">
                                                                                     Enter Your Pin
@@ -730,7 +550,7 @@
 
                                                                             </div> --}}
 
-                                                                            {{-- <div class="form-group text-right ">
+                                                                                    {{-- <div class="form-group text-right ">
                                                                                 <button type="button"
                                                                                     class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success "
                                                                                     id="confirm_button">
@@ -742,88 +562,94 @@
                                                                                     <span id="spinner-text">Loading...</span>
                                                                                 </button>
                                                                             </div> --}}
-                                                                        </div>
-
-                                                                        <div class="self_form">
-
-
-                                                                            <div class="form-group row">
-
-                                                                                <b class="col-md-4 text-primary"> Receiver
-                                                                                    Name
-                                                                                    &nbsp; <span
-                                                                                        class="text-danger">*</span></b>
-
-                                                                                {{-- value={{ session()->get('userAlias') }} --}}
-                                                                                <input type="text"
-                                                                                    class="form-control col-md-8 readOnly"
-                                                                                    id="receiver_name_self"
-                                                                                    {{-- placeholder="Enter Receiver Name" --}}
-                                                                                    value="{{ Session()->get('userAlias') }}"
-                                                                                    autocomplete="off" required readonly>
-                                                                                <br>
-
-                                                                            </div>
-
-                                                                            <div class="form-group row">
-
-                                                                                <b class="col-md-4 text-primary"> Receiver
-                                                                                    Telephone: &nbsp; <span
-                                                                                        class="text-danger">*</span></b>
-
-                                                                                <input type="text"
-                                                                                    class="form-control col-md-8 "
-                                                                                    id="receiver_phoneNum_self"
-                                                                                    placeholder="Enter Phone Number"
-                                                                                    autocomplete="off" required>
-                                                                                {{-- value="{{ session()->get('customerPhone') }} --}}
-                                                                                <br>
-                                                                                {{-- oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" --}}
-                                                                            </div>
-
-                                                                            <div class="form-group row">
-
-                                                                                <b class="col-md-4 text-primary"> Receiver
-                                                                                    Address: &nbsp; <span
-                                                                                        class="text-danger">*</span></b>
-
-                                                                                <input type="text"
-                                                                                    class="form-control col-md-8 "
-                                                                                    id="receiver_address_self"
-                                                                                    placeholder="Enter Address"
-                                                                                    autocomplete="off" required>
-                                                                                <br>
-
-                                                                            </div>
-
-                                                                            <div class="form-group row mb-3">
-
-                                                                                <b class="col-md-4 text-primary">Amount&nbsp;
-                                                                                    <span
-                                                                                        class="text-danger">*</span></b>
-
-                                                                                <div class="input-group mb-1 col-8"
-                                                                                    style="padding: 0px;">
-                                                                                    <div class="input-group-prepend">
-                                                                                        <input type="text"
-                                                                                            class="input-group-text select_currency"
-                                                                                            id="" style="width: 80px;"
-                                                                                            readonly>
-                                                                                    </div>
-
-                                                                                    &nbsp;&nbsp;
-                                                                                    <input type="text"
-                                                                                        class="form-control "
-                                                                                        id="amount_self"
-                                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')"
-                                                                                        required>
                                                                                 </div>
 
+                                                                                <div class="self_form">
 
 
-                                                                            </div>
+                                                                                    <div class="form-group row">
 
-                                                                            {{-- <div class="form-group row">
+                                                                                        <b class="col-md-4 text-primary">
+                                                                                            Receiver
+                                                                                            Name
+                                                                                            &nbsp; <span
+                                                                                                class="text-danger">*</span></b>
+
+                                                                                        {{-- value={{ session()->get('userAlias') }} --}}
+                                                                                        <input type="text"
+                                                                                            class="form-control col-md-8 readOnly"
+                                                                                            id="receiver_name_self"
+                                                                                            {{-- placeholder="Enter Receiver Name" --}}
+                                                                                            value="{{ Session()->get('userAlias') }}"
+                                                                                            autocomplete="off" required
+                                                                                            readonly>
+                                                                                        <br>
+
+                                                                                    </div>
+
+                                                                                    <div class="form-group row">
+
+                                                                                        <b class="col-md-4 text-primary">
+                                                                                            Receiver
+                                                                                            Telephone: &nbsp; <span
+                                                                                                class="text-danger">*</span></b>
+
+                                                                                        <input type="text"
+                                                                                            class="form-control col-md-8 "
+                                                                                            id="receiver_phoneNum_self"
+                                                                                            placeholder="Enter Phone Number"
+                                                                                            autocomplete="off" required>
+                                                                                        {{-- value="{{ session()->get('customerPhone') }} --}}
+                                                                                        <br>
+                                                                                        {{-- oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" --}}
+                                                                                    </div>
+
+                                                                                    <div class="form-group row">
+
+                                                                                        <b class="col-md-4 text-primary">
+                                                                                            Receiver
+                                                                                            Address: &nbsp; <span
+                                                                                                class="text-danger">*</span></b>
+
+                                                                                        <input type="text"
+                                                                                            class="form-control col-md-8 "
+                                                                                            id="receiver_address_self"
+                                                                                            placeholder="Enter Address"
+                                                                                            autocomplete="off" required>
+                                                                                        <br>
+
+                                                                                    </div>
+
+                                                                                    <div class="form-group row mb-3">
+
+                                                                                        <b class="col-md-4 text-primary">Amount&nbsp;
+                                                                                            <span
+                                                                                                class="text-danger">*</span></b>
+
+                                                                                        <div class="input-group mb-1 col-8"
+                                                                                            style="padding: 0px;">
+                                                                                            <div
+                                                                                                class="input-group-prepend">
+                                                                                                <input type="text"
+                                                                                                    class="input-group-text select_currency"
+                                                                                                    id=""
+                                                                                                    style="width: 80px;"
+                                                                                                    readonly>
+                                                                                            </div>
+
+                                                                                            &nbsp;&nbsp;
+                                                                                            <input type="text"
+                                                                                                class="form-control "
+                                                                                                id="amount_self"
+                                                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')"
+                                                                                                required>
+                                                                                        </div>
+
+
+
+                                                                                    </div>
+
+                                                                                    {{-- <div class="form-group row">
 
                                                                                 <b class="col-md-5 text-primary " for="pin">
                                                                                     Enter Your Pin
@@ -837,28 +663,44 @@
                                                                             </div> --}}
 
 
+                                                                                </div>
+
+
+                                                                                <div class="form-group text-right mt-2">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success "
+                                                                                        id="confirm_next_button">
+                                                                                        <span class="submit-text">&nbsp;
+                                                                                            Next
+                                                                                            &nbsp;<i
+                                                                                                class="fe-arrow-right"></i></span>
+                                                                                        <span
+                                                                                            class="spinner-border spinner-border-sm mr-1"
+                                                                                            id="spinner-self" role="status"
+                                                                                            aria-hidden="true"></span>
+                                                                                        <span
+                                                                                            id="spinner-text-self">Loading...</span>
+                                                                                    </button>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            {{-- <div class="col-md-1"></div> --}}
                                                                         </div>
 
 
-                                                                        <div class="form-group text-right mt-2">
-                                                                            <button type="button"
-                                                                                class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success "
-                                                                                id="confirm_next_button">
-                                                                                <span class="submit-text">&nbsp; Next
-                                                                                    &nbsp;<i
-                                                                                        class="fe-arrow-right"></i></span>
-                                                                                <span
-                                                                                    class="spinner-border spinner-border-sm mr-1"
-                                                                                    id="spinner-self" role="status"
-                                                                                    aria-hidden="true"></span>
-                                                                                <span
-                                                                                    id="spinner-text-self">Loading...</span>
-                                                                            </button>
-                                                                        </div>
+
+
+
+
+
+
 
                                                                     </div>
 
-                                                                    {{-- <div class="col-md-1"></div> --}}
+
+                                                                    <div class="col-md-1"></div>
+
                                                                 </div>
 
 
@@ -869,32 +711,19 @@
 
 
 
-                                                            </div>
 
 
-                                                            <div class="col-md-1"></div>
-
+                                                            </form>
                                                         </div>
+                                                    </div>
 
 
-
-
-
-
-
-
-
-
-
-                                                    </form>
 
 
                                                 </div> <!-- end col -->
 
-                                                <div class="col-md-4 m-2 others_summary"
-                                                    style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
-                                                    <br><br>
-                                                    <div class=" col-md-12 card card-body">
+                                                <div class="col-md-4 m-2 others_summary">
+                                                    <div class=" col-md-12 card card-body site-card">
                                                         <h4 class="text-primary">Sender Acc. Info</h4>
                                                         <hr class="mt-0">
 
@@ -1037,7 +866,7 @@
                                     <br>
 
                                     <div class="card-box">
-                                        <b class="text-primary">Unredeemed</b>
+                                        {{-- <b class="text-primary">Unredeemed</b> --}}
                                         <div class="card mb-2 bg-info">
                                             <div class="card-body">
                                                 <div class="row">
@@ -1074,7 +903,7 @@
                                         <div class="table-responsive table-bordered accounts_display_area">
                                             <table id="" class="table table-striped mb-0 ">
                                                 <thead>
-                                                    <tr class="bg-primary text-white ">
+                                                    <tr class="bg-danger text-white ">
                                                         <td> <b> Reference Number </b> </td>
                                                         <td> <b> Receiver Name </b> </td>
                                                         <td> <b> Receiver Telephone </b> </td>
@@ -1100,118 +929,63 @@
                         <div class="col-12">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-6  m-2" id="request_form_div"
-                                        style="background-image: linear-gradient(to bottom right, white, rgb(223, 225, 226));">
-                                        <br><br><br>
+                                    <div class="col-md-6  m-2" id="request_form_div">
+                                        <div class="card site-card">
+                                            <div class="card-body">
+                                                <form action="#" class="select_beneficiary"
+                                                    id="redeem_korpor_payment_details_form" autocomplete="off"
+                                                    aria-autocomplete="none">
+                                                    @csrf
 
-                                        <form action="#" class="select_beneficiary" id="redeem_korpor_payment_details_form"
-                                            autocomplete="off" aria-autocomplete="none">
-                                            @csrf
+                                                    <div class="col-md-12">
+                                                        {{-- <br><br><br> --}}
+                                                        <div class="row">
+                                                            {{-- <div class="col-md-1"></div> --}}
 
-                                            <div class="col-md-12">
-                                                {{-- <br><br><br> --}}
-                                                <div class="row">
-                                                    {{-- <div class="col-md-1"></div> --}}
+                                                            <div class="col-md-12 redeem_korpor">
 
-                                                    <div class="col-md-12 redeem_korpor">
+                                                                <p class="text-muted font-14 m-b-20">
+                                                                    <span> <i class="fa fa-info-circle  text-red"></i> <b
+                                                                            style="color:red;">Please
+                                                                            Note:&nbsp;&nbsp;</b> <span
+                                                                            class="">Enter the
+                                                                            remittance and phone number for korpor payment
+                                                                            details.
 
-                                                        <p class="text-muted font-14 m-b-20">
-                                                            <span> <i class="fa fa-info-circle  text-red"></i> <b
-                                                                    style="color:red;">Please
-                                                                    Note:&nbsp;&nbsp;</b> <span
-                                                                    class="">Enter the
-                                                                    remittance and phone number for korpor payment details.
-
-                                                                    <hr>
-                                                        </p>
-
-
-                                                        <div class="form-group row">
-
-                                                            <b class="col-md-5 text-primary"> Mobile Number &nbsp; <span
-                                                                    class="text-danger">*</span></b>
+                                                                            <hr>
+                                                                </p>
 
 
-                                                            <input type="text" class="form-control col-md-7" id="mobile_no"
-                                                                autocomplete="off" required>
-                                                            <br>
+                                                                <div class="form-group row">
 
-                                                        </div>
-
-                                                        <br>
-                                                        <div class="form-group row">
-
-                                                            <b class="col-md-5 text-primary"> Remittance Number:
-                                                                &nbsp; <span class="text-danger">*</span></b>
-
-                                                            <input type="text" class="form-control col-md-7"
-                                                                id="remittance_no" placeholder="enter phone number"
-                                                                autocomplete="off"
-                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                                required>
-                                                            <br>
-
-                                                        </div>
+                                                                    <b class="col-md-5 text-primary"> Mobile Number &nbsp;
+                                                                        <span class="text-danger">*</span></b>
 
 
-                                                        <br>
-                                                        {{-- <div class="form-group row">
+                                                                    <input type="text" class="form-control col-md-7"
+                                                                        id="mobile_no" autocomplete="off" required>
+                                                                    <br>
 
-                                                                                                        <b class="col-md-5 text-primary" for="pin">
-                                                                                                            Enter Your Pin
-                                                                                                            <span class="text-danger">*</span></b>
-                                                                                                        <input type="password" class="form-control col-md-7"
-                                                                                                            id="user_pin_reverse"
-                                                                                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
+                                                                </div>
 
+                                                                <br>
+                                                                <div class="form-group row">
 
+                                                                    <b class="col-md-5 text-primary"> Remittance Number:
+                                                                        &nbsp; <span class="text-danger">*</span></b>
 
-                                                                                                    </div> --}}
-                                                        <br><br><br>
-                                                        <div class="form-group text-right ">
-                                                            <button type="button"
-                                                                class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success "
-                                                                id="redeem_button">
-                                                                <span id="next-text">Next</span>
-                                                                <span class="spinner-border spinner-border-sm mr-1"
-                                                                    id="spinner-next" role="status"
-                                                                    aria-hidden="true"></span>
-                                                                <span id="spinner-text-next">Loading...</span>
-                                                            </button>
-                                                        </div>
+                                                                    <input type="text" class="form-control col-md-7"
+                                                                        id="remittance_no" placeholder="enter phone number"
+                                                                        autocomplete="off"
+                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                        required>
+                                                                    <br>
+
+                                                                </div>
 
 
-                                                    </div>
-                                                    <div class="col-md-12 korpor_details">
-
-                                                        <div class="form-group row">
-
-                                                            <b class="col-md-5 text-primary"> Receiver's Name:</b>
-
-
-                                                            <input type="text" class="form-control col-md-7"
-                                                                id="receiver_name_redeem" autocomplete="off" readonly>
-                                                            <br>
-
-                                                        </div>
-
-                                                        <br>
-                                                        <div class="form-group row">
-
-                                                            <b class="col-md-5 text-primary"> Receiver's Phone:
-                                                            </b>
-
-                                                            <input type="text" class="form-control col-md-7"
-                                                                id="receiver_phone_redeem" autocomplete="off"
-                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                                readonly>
-                                                            <br>
-
-                                                        </div>
-
-
-                                                        <br>
-                                                        {{-- <div class="form-group row">
+                                                                <br>
+                                                                {{-- <div class="form-group row">
 
                                                                                                         <b class="col-md-5 text-primary" for="pin">
                                                                                                             Enter Your Pin
@@ -1223,73 +997,134 @@
 
 
                                                                                                     </div> --}}
-                                                        <div class="form-group row">
+                                                                <br><br><br>
+                                                                <div class="form-group text-right ">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success "
+                                                                        id="redeem_button">
+                                                                        <span id="next-text">Next</span>
+                                                                        <span class="spinner-border spinner-border-sm mr-1"
+                                                                            id="spinner-next" role="status"
+                                                                            aria-hidden="true"></span>
+                                                                        <span id="spinner-text-next">Loading...</span>
+                                                                    </button>
+                                                                </div>
 
-                                                            <b class="col-md-5 text-primary"> Receiver Address:
-                                                            </b>
 
-                                                            <input type="text" class="form-control col-md-7"
-                                                                id="receiver_address_redeem" autocomplete="off"
-                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                                readonly>
-                                                            <br>
+                                                            </div>
+                                                            <div class="col-md-12 korpor_details">
 
+                                                                <div class="form-group row">
+
+                                                                    <b class="col-md-5 text-primary"> Receiver's Name:</b>
+
+
+                                                                    <input type="text" class="form-control col-md-7"
+                                                                        id="receiver_name_redeem" autocomplete="off"
+                                                                        readonly>
+                                                                    <br>
+
+                                                                </div>
+
+                                                                <br>
+                                                                <div class="form-group row">
+
+                                                                    <b class="col-md-5 text-primary"> Receiver's Phone:
+                                                                    </b>
+
+                                                                    <input type="text" class="form-control col-md-7"
+                                                                        id="receiver_phone_redeem" autocomplete="off"
+                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                        readonly>
+                                                                    <br>
+
+                                                                </div>
+
+
+                                                                <br>
+                                                                {{-- <div class="form-group row">
+
+                                                                                                        <b class="col-md-5 text-primary" for="pin">
+                                                                                                            Enter Your Pin
+                                                                                                            <span class="text-danger">*</span></b>
+                                                                                                        <input type="password" class="form-control col-md-7"
+                                                                                                            id="user_pin_reverse"
+                                                                                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
+
+
+
+                                                                                                    </div> --}}
+                                                                <div class="form-group row">
+
+                                                                    <b class="col-md-5 text-primary"> Receiver Address:
+                                                                    </b>
+
+                                                                    <input type="text" class="form-control col-md-7"
+                                                                        id="receiver_address_redeem" autocomplete="off"
+                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                        readonly>
+                                                                    <br>
+
+                                                                </div>
+                                                                <br>
+
+                                                                <div class="form-group row">
+
+                                                                    <b class="col-md-5 text-primary"> Amount:</b>
+
+                                                                    <input type="text" class="form-control col-md-7"
+                                                                        id="receiver_amount_redeem" autocomplete="off"
+                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                        readonly>
+                                                                    <br>
+
+                                                                </div>
+                                                                <br>
+
+                                                                <div class="form-group row">
+
+                                                                    <b class="col-md-5 text-primary"> Enter OTP:
+                                                                        &nbsp; <span class="text-danger">*</span></b>
+
+                                                                    <input type="text" class="form-control col-md-7"
+                                                                        id="receiver_otp_redeem"
+                                                                        placeholder="One Time Password" autocomplete="off"
+                                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                        required>
+                                                                    <br>
+
+                                                                </div>
+
+
+
+                                                                <br><br><br>
+                                                                <div class="form-group text-right ">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success"
+                                                                        id="done_button">
+                                                                        <span id="redeem-text">Redeem</span>
+                                                                        <span class="spinner-border spinner-border-sm mr-1"
+                                                                            id="spinner-redeem" role="status"
+                                                                            aria-hidden="true"></span>
+                                                                        <span id="spinner-text-redeem">Loading...</span>
+                                                                    </button>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            {{-- <div class="col-md-1"></div> --}}
                                                         </div>
-                                                        <br>
-
-                                                        <div class="form-group row">
-
-                                                            <b class="col-md-5 text-primary"> Amount:</b>
-
-                                                            <input type="text" class="form-control col-md-7"
-                                                                id="receiver_amount_redeem" autocomplete="off"
-                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                                readonly>
-                                                            <br>
-
-                                                        </div>
-                                                        <br>
-
-                                                        <div class="form-group row">
-
-                                                            <b class="col-md-5 text-primary"> Enter OTP:
-                                                                &nbsp; <span class="text-danger">*</span></b>
-
-                                                            <input type="text" class="form-control col-md-7"
-                                                                id="receiver_otp_redeem" placeholder="One Time Password"
-                                                                autocomplete="off"
-                                                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                                required>
-                                                            <br>
-
-                                                        </div>
-
-
-
-                                                        <br><br><br>
-                                                        <div class="form-group text-right ">
-                                                            <button type="button"
-                                                                class="btn btn-primary btn-rounded waves-effect waves-light disappear-after-success"
-                                                                id="done_button">
-                                                                <span id="redeem-text">Redeem</span>
-                                                                <span class="spinner-border spinner-border-sm mr-1"
-                                                                    id="spinner-redeem" role="status"
-                                                                    aria-hidden="true"></span>
-                                                                <span id="spinner-text-redeem">Loading...</span>
-                                                            </button>
-                                                        </div>
-
 
                                                     </div>
-
-                                                    {{-- <div class="col-md-1"></div> --}}
-                                                </div>
-
+                                                </form>
                                             </div>
-                                        </form>
+                                        </div>
+
+
 
                                     </div>
-                                    <div class="col-md-5">
+                                    {{-- <div class="col-md-5">
                                         <br>
                                         <div class="card">
                                             <div class="card-body">
@@ -1327,7 +1162,7 @@
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -1403,7 +1238,7 @@
                                                 <div class="table-responsive table-bordered accounts_display_area">
                                                     <table id="" class="table table-striped mb-0 ">
                                                         <thead>
-                                                            <tr class="bg-primary text-white ">
+                                                            <tr class="bg-danger text-white ">
                                                                 <td> <b> Reference Number </b> </td>
                                                                 <td> <b> Receiver Name </b> </td>
                                                                 <td> <b> Receiver Telephone </b> </td>

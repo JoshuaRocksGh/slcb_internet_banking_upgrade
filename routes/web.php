@@ -158,9 +158,9 @@ Route::group(['middleware' => ['userAuth']], function () {
     Route::get('qr-payment', [paymentController::class, 'qr_payment']);
     Route::get('cardless-payment', [paymentController::class, 'cardless_payment'])->name('cardless-payment');
     Route::get('airtime-payment', [paymentController::class, 'airtime_payment'])->name('airtime-payment');
-    Route::get('/bulk-korpor', [KorporController::class, 'bulk_korpor'])->name('bulk-korpor');
+    Route::get('/bulk-salone-link', [KorporController::class, 'bulk_korpor'])->name('bulk-salone-link');
     Route::get('/utility-payment', [paymentController::class, 'utilities'])->name('utility-payment');
-    Route::get('e-korpor', [paymentController::class, 'e_korpor'])->name('e-korpor');
+    Route::get('salone-link', [paymentController::class, 'e_korpor'])->name('salone-link');
     Route::get('bulk-upload-payment', [paymentController::class, 'bulk_upload_payment'])->name('bulk-upload-payment');
     Route::get('payment-beneficiary', [paymentController::class, 'payment_beneficiary_list'])->name('payment-beneficiary');
     Route::get('payment-beneficiary-list', [paymentController::class, 'beneficiary_list'])->name('payment-beneficiary-list');
@@ -192,7 +192,7 @@ Route::group(['middleware' => ['userAuth']], function () {
     Route::post('corporate-reverse-korpor', [BulkUploadCorporateKorporController::class, 'corporate_reverse_korpor'])->name('corporate-reverse-korpor');
     Route::get('/bulk-korpor_detail', [KorporController::class, 'bulk_korpor_detail'])->name('bulk-korpor_detail');
 
-
+    // Route::get('my-investments',[CreateController::class, 'my_investment'])->name('my-investments');
 
     // --- LOANS
     Route::get('/loan-request', [LoansController::class, 'loan_request'])->name('loan-request');
@@ -224,6 +224,9 @@ Route::group(['middleware' => ['userAuth']], function () {
     Route::get('remove-signature', [AccountServicesController::class, 'remove_signature'])->name('remove-signature');
     Route::get('kyc-update', [AccountServicesController::class, 'kyc_update'])->name('kyc-update');
     Route::get('complaint', [AccountServicesController::class, 'make_complaint'])->name('complaint');
+
+    // Route::get('budgetting',[CreateController::class, 'budgetting'])->name('budgetting');
+
 
     //APPROVALS
     Route::get('/approvals-pending', [PendingController::class, 'approvals_pending'])->name('approvals-pending');
