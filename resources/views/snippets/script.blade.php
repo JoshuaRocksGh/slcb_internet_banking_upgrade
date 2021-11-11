@@ -90,7 +90,7 @@
     function siteLoading(state) {
         if (state === "show") {
             $(".preloader").fadeIn(500);
-            $("#preloader").css("background-color", "#4fc6e17a")
+            $("#preloader").css("background-color", "#F0AEAE")
             return
         }
         $(".preloader").fadeOut(500);
