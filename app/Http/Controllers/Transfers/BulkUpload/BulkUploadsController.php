@@ -46,7 +46,7 @@ class BulkUploadsController extends Controller
     public function download_bulk_korpor()
     {
 
-        $pathToFile = public_path() . '/assets/images/bulk_payment_korpor.xlsx';
+        $pathToFile = public_path() . '/assets/images/bulk_salone_link.xlsx';
 
         $header = array(
             'Content-Type' => 'application/xlsx'
@@ -768,7 +768,7 @@ class BulkUploadsController extends Controller
 
         // return $account_info;
 
-        $account_mandate = $account_info[5];
+        $account_mandate = $account_info[6];
 
         if ($request->file()) {
 
@@ -790,7 +790,7 @@ class BulkUploadsController extends Controller
                 ->select('NAME', 'MOBILE_NO', 'AMOUNT', 'ADDRESS',)
                 ->get();
 
-            // return response()->json($result);
+            // return response()->json($results);
             foreach ($results as $result) {
                 if (strlen($result->MOBILE_NO) != 10 || strlen($result->MOBILE_NO) > 10 || $result->NAME == "" || $result->ADDRESS == "") {
                     Alert::error("Error Uploading Bulk Korpor");

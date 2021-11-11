@@ -187,11 +187,14 @@ class ExcelKorporUploadImport implements WithHeadingRow, ToCollection
 
                 $beneficiaryname = $row['name'];
                 $creditaccountnumber =  $row['telephone_number'];
+                $ref_no = $row['ref_number'];
+
+                // echo ($ref_no);
 
                 // return response()->json([
                 //     'responseCode' => '526',
                 //     'message' => 'Insert into database',
-                //     "data"  => $creditaccountnumber
+                //     "data"  => $ref_no
                 // ]);
 
                 $t_amt = $t_amt + (float) $row['amount'];

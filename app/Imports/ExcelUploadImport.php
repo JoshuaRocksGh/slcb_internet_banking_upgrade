@@ -189,6 +189,8 @@ class ExcelUploadImport implements WithHeadingRow, ToCollection
 
                 $beneficiaryname = $row['name'];
                 $creditaccountnumber =  $row['account_number'];
+                $ref_no = $row['ref_number'];
+                // echo ($ref_no);
 
                 // return response()->json([
                 //     'responseCode' => '526',
@@ -221,7 +223,7 @@ class ExcelUploadImport implements WithHeadingRow, ToCollection
                     'bank_name' => '$bank_name',
                     'created_at' => NOW(),
                     'updated_at' => NOW(),
-                    
+
                 ]);
 
                 /*

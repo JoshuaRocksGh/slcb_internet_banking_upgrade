@@ -150,8 +150,6 @@
     <!-- end Auth fluid right content -->
 
 
-    </div>
-    <!-- end auth-fluid-->
 
 @endsection
 

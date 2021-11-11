@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <a href="{{ url('e-korpor') }}">
+                    <a href="{{ url('salone-link') }}">
                         <div class="widget-rounded-circle card-box home-card"
                             style="background-color: rgba(153, 225, 254, 1);">
                             <div class=" row">
@@ -111,7 +111,7 @@
                                 </div>
                                 <div class="col-8">
                                     <div class="text-right">
-                                        <h3 class="mt-1 text-black"><span>&nbsp;<b>E-Korpor</b> </span></h3>
+                                        <h3 class="mt-1 text-black"><span>&nbsp;<b>Salone Link</b> </span></h3>
                                     </div>
                                 </div>
                             </div> <!-- end row-->
@@ -613,9 +613,9 @@
                         </form>
                     </div>
 
-                    <div class="card-box" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                    {{-- <div class="card-box" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                         <br><br><br><br><br><br>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="modal fade" id="bs-example-modal-lg" role="dialog"

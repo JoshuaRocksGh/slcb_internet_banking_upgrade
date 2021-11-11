@@ -192,7 +192,13 @@ Route::group(['middleware' => ['userAuth']], function () {
     Route::post('corporate-reverse-korpor', [BulkUploadCorporateKorporController::class, 'corporate_reverse_korpor'])->name('corporate-reverse-korpor');
     Route::get('/bulk-korpor_detail', [KorporController::class, 'bulk_korpor_detail'])->name('bulk-korpor_detail');
 
-    // Route::get('my-investments',[CreateController::class, 'my_investment'])->name('my-investments');
+    Route::get('my-investments', [FixedDepositAccountController::class, 'my_investment'])->name('my-investments');
+
+
+    Route::get('fixed-deposit', [FixedDepositAccountController::class, 'account_fixed_deposit'])->name('fixed-deposit');
+
+
+
 
     // --- LOANS
     Route::get('/loan-request', [LoansController::class, 'loan_request'])->name('loan-request');

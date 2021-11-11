@@ -27,9 +27,8 @@
                 <h6>
 
                     <span class="flaot-right">
-                        <b class="text-primary"> Payments </b> &nbsp; > &nbsp; <b class="text-primary"> E-korpor</b>
-                        &nbsp;
-                        > &nbsp;<b class="text-danger">Bulk E-Korpor </b>
+                        <b class="text-primary"> Payments </b> &nbsp; > &nbsp; <b class="text-danger">Bulk Salone Link
+                        </b>
                     </span>
 
                 </h6>
@@ -48,7 +47,7 @@
                 <span> <i class="fa fa-info-circle  text-red"></i> <b style="color:red;">Please Note:&nbsp;&nbsp;</b> <span
                         class="">You can download template for upload (<span class=" text-danger"><a
                                 href="{{ url('download_bulk_korpor_file') }}" class="text-danger"> Bulk
-                                E-korpor</a></span>)</span> </span>
+                                Salone Link</a></span>)</span> </span>
 
             </p>
         </div>
@@ -74,10 +73,7 @@
                                                 class="text-danger"> *</span></label>
                                         <select class="custom-select " name="my_account" id="my_account" required>
                                             <option value="">Select Account</option>
-                                            <option
-                                                value="Corporate Acc~MARIAMA KAMARA~004004110449140121~SLL~150000000~1A or 2B">
-                                                Corporate Acc||004004110449140121||SLL 150000000
-                                            </option>
+                                            @include("snippets.accounts")
                                         </select>
                                     </div>
                                 </div>
@@ -361,7 +357,7 @@
             setTimeout(function() {
                 // bulk_upload_list('057725', "P")
                 bulk_upload_list(customer_no, "P")
-                my_account()
+                //my_account()
             }, 1000)
 
             $('#bulk_upload_form').submit(function(e) {

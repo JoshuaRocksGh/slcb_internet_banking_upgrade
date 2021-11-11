@@ -11,7 +11,7 @@ class FixedDepositAccountController extends Controller
 {
     //
 
-    function fixed_deposit_account ()
+    function fixed_deposit_account()
     {
         $authToken = session()->get('userToken');
         $userID = session()->get('userId');
@@ -26,11 +26,19 @@ class FixedDepositAccountController extends Controller
         ];
 
 
-        $response = Http::get(env('API_BASE_URL') ."account/accountFD/$customerNumber");
+        $response = Http::get(env('API_BASE_URL') . "account/accountFD/$customerNumber");
 
         $result = new ApiBaseResponse();
         return $result->api_response($response);
-
     }
 
+    public function my_investment(Request $request)
+    {
+        return view('pages.investments.my_investment');
+    }
+
+    public function account_fixed_deposit(Request $request)
+    {
+        return view('pages.investments.account_fixed_deposit');
+    }
 }

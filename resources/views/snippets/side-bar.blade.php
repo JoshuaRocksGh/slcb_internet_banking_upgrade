@@ -12,7 +12,7 @@
                 <li>
                     <a href="#sidebarMyAccount" data-toggle="collapse">
                         <i class="mdi mdi-book-account-outline"></i>
-                        <span> My Account</span>
+                        <span> Account</span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarMyAccount">
@@ -85,9 +85,7 @@
                                     <span> QR Payment</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="{{ url('payment-beneficiary-list') }}">Beneficiaries</a>
-                            </li>
+
                             @if (config('app.corporate'))
                                 <li>
                                     <a href="{{ url('bulk-salone-link') }}">Bulk Salone Link</a>
@@ -100,6 +98,9 @@
                                     <a href="{{ url('bulk-upload-payment') }}">Bulk Upload (Mobile Money)</a>
                                 </li>
                             @endif
+                            <li>
+                                <a href="{{ url('payment-beneficiary-list') }}">Beneficiaries</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -107,7 +108,7 @@
                 <li>
                     <a href="#sidebarLoans" data-toggle="collapse">
                         <i class="mdi mdi-briefcase-check-outline"></i>
-                        <span> My Loans </span>
+                        <span> Loans </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="sidebarLoans">
@@ -122,9 +123,23 @@
                     </div>
                 </li>
                 <li>
-                    <a href="{{ url('my-investments') }}">
-                        <i class="fas fa-hand-holding-usd"></i> <span> My Investments</span>
+                    <a href="#investmentSetting" data-toggle="collapse">
+                        {{-- {{ url('my-investments') }} --}}
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span> Investments</span>
+                        <span class="menu-arrow"></span>
                     </a>
+                    <div class="collapse" id="investmentSetting">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ url('fixed-deposit') }}">Fixed Deposit</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('my-investments') }}">Current Investment</a>
+                            </li>
+                        </ul>
+
+                    </div>
                 </li>
                 <li>
                     <a href="#sidebarAccountServices" data-toggle="collapse">
@@ -266,10 +281,26 @@
 
                 </li>
                 <li>
-                    <a href="{{ url('branch-locator') }}">
+                    <a href="#locatorSetting" data-toggle="collapse">
+
                         <i class="mdi mdi-map-marker-outline"></i>
-                        <span> Branch Locator </span>
+                        <span> Locator </span>
+                        <span class="menu-arrow"></span>
                     </a>
+                    <div class="collapse" id="locatorSetting">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ url('branch-locator') }}">Branch</a>
+                            </li>
+                            <li>
+                                <a href="">Atm</a>
+                            </li>
+                            <li>
+                                <a href="">Agent</a>
+                            </li>
+                        </ul>
+
+                    </div>
                 </li>
 
                 <li>
